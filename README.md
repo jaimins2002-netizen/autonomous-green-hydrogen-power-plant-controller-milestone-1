@@ -16,27 +16,46 @@ The controller specification defines four inputs and one output:
 
 The supplied source specification defines the triangular membership points and 11 expert rules used by later implementation, testing, analysis, and UI milestones. The hydrogen-tank pressure input is safety-critical: production should be reduced as tank pressure approaches the high-pressure region.
 
-## Contents
+## 📖 Overview
+Milestone 1 defines the controller specification for an educational Autonomous Green Hydrogen Power Plant Controller. It establishes the input-output contract, operating ranges, membership functions, and fuzzy rule base that serve as the foundation for all later milestones.
 
-- `docs/Milestone_1_Source_Specification.pdf` — source specification presentation.
-- `docs/Milestone_1_IO_Specification.md` — concise machine-readable summary of the controller signals and requirements.
+## 🎯 Objective
+- Define the controller architecture.
+- Specify controller inputs and outputs.
+- Document operating ranges and linguistic variables.
+- Establish the fuzzy logic rule base.
+- Provide a common reference for implementation and testing.
 
-## Project Context
+## ⚙️ Controller Inputs
+- Renewable Power (kW)
+- Water Flow Rate (L/min)
+- Stack Temperature (°C)
+- Hydrogen Tank Pressure (bar)
 
-This milestone is the specification foundation for subsequent phases that implement the fuzzy controller, exercise input combinations, analyze controller behavior, and expose live controls.
+## 📤 Controller Output
+- Hydrogen Production Rate (kg/h)
 
-## Safety Disclaimer
+## 🧠 Fuzzy Logic Features
+- Mamdani Fuzzy Inference System
+- Triangular Membership Functions
+- Expert Rule Base
+- Defuzzification for crisp output generation
 
-This repository contains an educational simulation specification. It is **not** a certified process-safety system and must not be used to control real hydrogen-production equipment without appropriate engineering validation, hardware safeguards, regulatory review, and qualified professional oversight.
+## 📁 Repository Structure
+```
+docs/
+├── Milestone_1_Source_Specification.pdf
+└── Milestone_1_IO_Specification.md
+```
 
-## Authors
+## 🔒 Safety Note
+This project is intended for educational and research purposes only. It is not designed or certified for controlling real hydrogen production systems.
 
-Krupa Ashishkumar Rajput; Jaimin Sanghani; Harsh Shingala; Makwana Shlock.
+## 🚀 Next Milestone
+Milestone 2 implements the fuzzy controller defined in this specification using Python and scikit-fuzzy.
 
-## Project Website
-
-Visit the project landing page: [jaimins2002-netizen.github.io](https://jaimins2002-netizen.github.io/).
-
-## License
-
-No license has been specified for this milestone.
+## 👥 Authors
+- Krupa Ashishkumar Rajput
+- Jaimin Sanghani
+- Harsh Shingala
+- Makwana Shlock
